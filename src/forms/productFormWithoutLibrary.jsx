@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FormInput } from "../components/FormInput";
-import { FormTextarea } from "../components/FormTextarea";
-import { FormButton } from "../components/FormButton";
+import FormInput from "../components/FormInput";
+import FormTextarea from "../components/FormTextarea";
+import FormButton from "../components/FormButton";
 import { createProduct } from "../services/productApi";
 
 function ProductFormWithoutLibrary() {
@@ -183,59 +183,68 @@ function ProductFormWithoutLibrary() {
                 placeholder="Enter product description"
             />
 
-            <FormInput
-                label="Price"
-                name="price"
-                type="number"
-                value={formData.price}
-                onChange={handleChange}
-                placeholder="Enter product price"
-                error={errors.price}
-            />
+            <div className="form-row">
+                <FormInput
+                    label="Price"
+                    name="price"
+                    type="number"
+                    value={formData.price}
+                    onChange={handleChange}
+                    placeholder="Enter product price"
+                    error={errors.price}
+                />
 
-            <FormInput
-                label="Compare-at Price"
-                name="compareAtPrice"
-                type="number"
-                value={formData.compareAtPrice}
-                onChange={handleChange}
-                placeholder="Enter compare-at price"
-                error={errors.compareAtPrice}
-            />
+                <FormInput
+                    label="Compare-at Price"
+                    name="compareAtPrice"
+                    type="number"
+                    value={formData.compareAtPrice}
+                    onChange={handleChange}
+                    placeholder="Enter compare-at price"
+                    error={errors.compareAtPrice}
+                />
 
-            <FormInput
-                label="SKU"
-                name="sku"
-                value={formData.sku}
-                onChange={handleChange}
-                placeholder="Enter SKU"
-            />
+            </div>
 
-            <FormInput
-                label="Barcode"
-                name="barcode"
-                value={formData.barcode}
-                onChange={handleChange}
-                placeholder="Enter barcode"
-            />
+            <div className="form-row">
+                <FormInput
+                    label="SKU"
+                    name="sku"
+                    value={formData.sku}
+                    onChange={handleChange}
+                    placeholder="Enter SKU"
+                />
 
-            <FormInput
-                label="Quantity"
-                name="quantity"
-                type="number"
-                value={formData.quantity}
-                onChange={handleChange}
-                placeholder="Enter quantity"
-                error={errors.quantity}
-            />
+                <FormInput
+                    label="Barcode"
+                    name="barcode"
+                    value={formData.barcode}
+                    onChange={handleChange}
+                    placeholder="Enter barcode"
+                />
 
-            <FormInput
-                label="Category"
-                name="category"
-                value={formData.category}
-                onChange={handleChange}
-                placeholder="Enter category"
-            />
+            </div>
+
+            <div className="form-row">
+                <FormInput
+                    label="Quantity"
+                    name="quantity"
+                    type="number"
+                    value={formData.quantity}
+                    onChange={handleChange}
+                    placeholder="Enter quantity"
+                    error={errors.quantity}
+                />
+
+                <FormInput
+                    label="Category"
+                    name="category"
+                    value={formData.category}
+                    onChange={handleChange}
+                    placeholder="Enter category"
+                />
+
+            </div>
 
             <FormInput
                 label="Tags"
@@ -254,9 +263,10 @@ function ProductFormWithoutLibrary() {
                 placeholder="Enter image URL"
             />
 
-            <div>
-                <label>
-                    <input type="checkbox"
+            <div className="checkbox-group">
+                <label className="checkbox-label">
+                    <input
+                        type="checkbox"
                         name="featured"
                         checked={formData.featured}
                         onChange={(event) =>
@@ -265,13 +275,13 @@ function ProductFormWithoutLibrary() {
                                 featured: event.target.checked,
                             }))
                         }
-
                     />
                     Featured
                 </label>
 
-                <label>
-                    <input type="checkbox"
+                <label className="checkbox-label">
+                    <input
+                        type="checkbox"
                         name="published"
                         checked={formData.published}
                         onChange={(event) =>
@@ -280,7 +290,6 @@ function ProductFormWithoutLibrary() {
                                 published: event.target.checked,
                             }))
                         }
-
                     />
                     Published
                 </label>

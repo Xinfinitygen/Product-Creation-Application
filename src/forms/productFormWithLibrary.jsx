@@ -87,69 +87,75 @@ function ProductFormWithLibrary() {
                 {...register("description")}
             />
 
-            <FormInput
-                label="Price"
-                name="price"
-                type="number"
-                placeholder="Enter product price"
-                error={errors.price?.message}
-                {...register("price", {
-                    required: "Price is required.",
-                    min: {
-                        value: 0,
-                        message: "Price cannot be negative.",
-                    },
-                })}
-            />
+            <div className="form-row">
+                <FormInput
+                    label="Price"
+                    name="price"
+                    type="number"
+                    placeholder="Enter product price"
+                    error={errors.price?.message}
+                    {...register("price", {
+                        required: "Price is required.",
+                        min: {
+                            value: 0,
+                            message: "Price cannot be negative.",
+                        },
+                    })}
+                />
 
-            <FormInput
-                label="Compare-at Price"
-                name="compareAtPrice"
-                type="number"
-                placeholder="Enter compare-at price"
-                error={errors.compareAtPrice?.message}
-                {...register("compareAtPrice", {
-                    min: {
-                        value: 0,
-                        message: "Compare-at price cannot be negative.",
-                    },
-                })}
-            />
+                <FormInput
+                    label="Compare-at Price"
+                    name="compareAtPrice"
+                    type="number"
+                    placeholder="Enter compare-at price"
+                    error={errors.compareAtPrice?.message}
+                    {...register("compareAtPrice", {
+                        min: {
+                            value: 0,
+                            message: "Compare-at price cannot be negative.",
+                        },
+                    })}
+                />
+            </div>
 
-            <FormInput
-                label="SKU"
-                name="sku"
-                placeholder="Enter SKU"
-                {...register("sku")}
-            />
+            <div className="form-row">
+                <FormInput
+                    label="SKU"
+                    name="sku"
+                    placeholder="Enter SKU"
+                    {...register("sku")}
+                />
 
-            <FormInput
-                label="Barcode"
-                name="barcode"
-                placeholder="Enter barcode"
-                {...register("barcode")}
-            />
+                <FormInput
+                    label="Barcode"
+                    name="barcode"
+                    placeholder="Enter barcode"
+                    {...register("barcode")}
+                />
+            </div>
 
-            <FormInput
-                label="Quantity"
-                name="quantity"
-                type="number"
-                placeholder="Enter quantity"
-                error={errors.quantity?.message}
-                {...register("quantity", {
-                    min: {
-                        value: 0,
-                        message: "Quantity cannot be negative.",
-                    },
-                })}
-            />
+            <div className="form-row">
+                <FormInput
+                    label="Quantity"
+                    name="quantity"
+                    type="number"
+                    placeholder="Enter quantity"
+                    error={errors.quantity?.message}
+                    {...register("quantity", {
+                        min: {
+                            value: 0,
+                            message: "Quantity cannot be negative.",
+                        },
+                    })}
+                />
 
-            <FormInput
-                label="Category"
-                name="category"
-                placeholder="Enter category"
-                {...register("category")}
-            />
+                <FormInput
+                    label="Category"
+                    name="category"
+                    placeholder="Enter category"
+                    {...register("category")}
+                />
+            </div>
 
             <FormInput
                 label="Tags"

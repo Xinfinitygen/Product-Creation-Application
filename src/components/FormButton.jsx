@@ -1,6 +1,6 @@
-function FormButton ({ children, type = "submit", disabled = false}) {
+function FormButton ({ children, disabled}) {
     return (
-        <button typeof={type} disabled={disabled}>
+        <button type="submit" className="form-button" disabled={disabled}>
             {children}
         </button>
     );

@@ -1,0 +1,222 @@
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.product-page {
+    min-height: 100vh;
+    padding: 48px 20px;
+}
+
+.product-container {
+    width: min(100%, 800px);
+    margin: 0 auto;
+}
+
+.product-header {
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.product-header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    color: #111827;
+}
+
+.product-header>p:last-child {
+    margin: 0;
+    color: #6b7280;
+}
+
+.form-switcher {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 5px;
+    background: #e5e7eb;
+    border-radius: 10px;
+}
+
+.form-switcher button {
+    flex: 1;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #4b5563;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-switcher button.active {
+    background: #ffffff;
+    color: #2563eb;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.form-button {
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.form-button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.form-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.product-card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-row .form-field {
+    min-width: 0;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-error {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #dc2626;
+}
+
+.success-message {
+    margin: 0 0 20px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #ecfdf5;
+    color: #15803d;
+    font-size: 14px;
+}
+.api-error {
+    margin-bottom: 18px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.product-card .form-error {
+    color: #dc2626;
+}
+
+.product-card>form>div:last-of-type {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.product-card>form>div:last-of-type label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.product-card>form>div:last-of-type input {
+    width: 16px;
+    height: 16px;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.product-card>form>button:hover {
+    background: #1d4ed8;
+}
+
+.product-card>form>button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}

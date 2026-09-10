@@ -6,4 +6,33 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+@media (max-width: 600px) {
+    .product-page {
+        padding: 32px 16px;
+    }
+
+    .product-card {
+        padding: 22px;
+    }
+
+    .product-header h1 {
+        font-size: 30px;
+    }
+
+    .form-switcher {
+        flex-direction: column;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .product-card > form > div:last-of-type {
+        flex-direction: column;
+        gap: 12px;
+    }
 }

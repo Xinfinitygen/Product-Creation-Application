@@ -3,7 +3,7 @@ function FormTextarea({
   name,
   placeholder,
   error,
-  ...textareaProps
+  ...props
 }) {
   return (
     <div className="form-field">
@@ -14,7 +14,7 @@ function FormTextarea({
         name={name}
         placeholder={placeholder}
         rows="5"
-        {...textareaProps}
+        {...props}
       />
 
       {error && <p className="form-error">{error}</p>}

@@ -5,7 +5,7 @@ function FormInput({
     type = "text",
     placeholder,
     error,
-    ...inputProps
+    ...props
 }) {
     return (
         <div className="form-field">
@@ -16,7 +16,7 @@ function FormInput({
                 name={name}
                 type={type}
                 placeholder={placeholder}
-                {...inputProps}
+                {...props}
             />
 
             {error && <p className="form-error">{error}</p>}
