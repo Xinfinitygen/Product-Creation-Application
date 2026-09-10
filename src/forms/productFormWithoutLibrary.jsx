@@ -4,7 +4,7 @@ import { FormTextarea } from "../components/FormTextarea";
 import { FormButton } from "../components/FormButton";
 import { createProduct } from "../services/productApi";
 
-export function ProductFormWithoutLibrary() {
+function ProductFormWithoutLibrary() {
 
     // Store all values entered into the product form.
     const [formData, setFormData] = useState({
@@ -292,3 +292,5 @@ export function ProductFormWithoutLibrary() {
         </form>
     );
 }
+
+export default ProductFormWithoutLibrary;

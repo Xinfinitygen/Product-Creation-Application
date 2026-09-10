@@ -1,12 +1,11 @@
 // Form Input Component
-export function FormInput({
+function FormInput({
     label,
     name,
     type = "text",
-    value,
-    onChange,
     placeholder,
     error,
+    ...inputProps
 }) {
     return (
         <div className="form-field">
@@ -16,12 +15,13 @@ export function FormInput({
                 id={name}
                 name={name}
                 type={type}
-                value={value}
-                onChange={onChange}
                 placeholder={placeholder}
+                {...inputProps}
             />
 
             {error && <p className="form-error">{error}</p>}
         </div>
-    )
+    );
 }
+
+export default FormInput;

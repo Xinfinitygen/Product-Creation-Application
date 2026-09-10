@@ -1,7 +1,8 @@
-export function FormButton ({ children, type = "submit", disabled = false}) {
+function FormButton ({ children, type = "submit", disabled = false}) {
     return (
         <button typeof={type} disabled={disabled}>
             {children}
         </button>
     );
 }
+export default FormButton;

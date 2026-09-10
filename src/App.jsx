@@ -1,4 +1,4 @@
-import { ProductCreation } from "./pages/productCreation";
+import  ProductCreation  from "../src/pages/productCreation";
 
 import "./index.css";
 function App() {
