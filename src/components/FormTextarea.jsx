@@ -1,26 +1,25 @@
-// Form TextArea Component
-export function FormTextarea({
-    label,
-    name,
-    value,
-    onChange,
-    placeholder,
-    error,
+function FormTextarea({
+  label,
+  name,
+  placeholder,
+  error,
+  ...props
 }) {
-    return (
-        <div className="form-field">
-            <label htmlFor={name}>{label}</label>
+  return (
+    <div className="form-field">
+      <label htmlFor={name}>{label}</label>
 
-            <textarea
-                id={name}
-                name={name}
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-                rows= "5"
-            />
+      <textarea
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        rows="5"
+        {...props}
+      />
 
-            {error && <p className="form-error">{error}</p>}
-        </div>
-    )
+      {error && <p className="form-error">{error}</p>}
+    </div>
+  );
 }
+
+export default FormTextarea;

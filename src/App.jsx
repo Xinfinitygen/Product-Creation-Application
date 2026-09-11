@@ -1,6 +1,7 @@
-import { ProductCreation } from "./pages/productCreation";
+import  ProductCreation  from "../src/pages/productCreation";
 
 import "./index.css";
+import "./App.css";
 function App() {
   return <ProductCreation />;
 }
