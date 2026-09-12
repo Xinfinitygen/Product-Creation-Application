@@ -114,3 +114,11 @@ To create a production build:
 The application uses the Product API to create products: 
 
 - [Product API](https://api.oluwasetemi.dev/ "https://api.oluwasetemi.dev/")
+
+## Online IDE
+
+[Open in StackBlitz](https://stackblitz.com/github/Xinfinitygen/Product-Creation-Application)
+
+## Live Demo
+
+[View the live application](https://xinfinitygen.github.io/Product-Creation-Application/) 
